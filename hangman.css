@@ -1,0 +1,117 @@
+
+.game-setup{
+    padding: 20px !important;
+}
+
+.hangman-img-intro{
+    margin: 20px 0px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.hangman-buttons button{
+    width: 65%;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    /* text-align: center; */
+    margin: auto;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.game-score{
+    display: flex;
+    justify-content: space-between;
+}
+
+.game-logo{
+    text-align: center;
+}
+
+.game-input{
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 70%;
+    margin: auto;
+    padding: 20px 0px;
+}
+
+.game-input input{
+    border-bottom: 2px solid black;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    width: 38px;
+    outline: none;
+    box-shadow: none;
+    box-shadow: none;
+    text-align: center;
+    font-size: 20px;
+    margin-right: 3px;
+}
+
+.game-alphabet{
+    display: flex;
+    align-items: revert;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 75%;
+    margin: auto;
+}
+
+.game-alphabet button{
+    width: 45px;
+    height: 45px;
+    padding: 17px;
+    margin: 4px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-color: black;
+    border: 0;
+    border-radius: 4px;
+}
+
+.game-reset{
+    width: 75%;
+    margin: auto;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.game-reset button{
+    color: white;
+    background-color: black;
+    border: 0;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 12px 40px;
+    font-weight: 800;
+}
+
+.game-answer-section{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.game-answer-section p{
+    padding: 10px;
+}
+
+@media screen and (max-width: 767px) {
+    .hang{
+        width: 100%;
+    }
+}
