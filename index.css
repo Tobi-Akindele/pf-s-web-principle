@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto");
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@700&display=swap');
 
 * {
   margin: 0;
@@ -7,13 +7,13 @@
   box-sizing: border-box;
 }
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
   background-color: #fff;
 }
-.central-container{
+.central-container {
   position: relative;
 }
 
@@ -28,7 +28,7 @@ body {
 }
 /* default css end */
 
-.splash{
+.splash {
   position: fixed;
   top: 0;
   left: 0;
@@ -36,8 +36,8 @@ body {
   height: 100vh;
   font-size: 144px;
   font-family: 'Cormorant SC', serif;
-  background-color: #043B4D;
-  background-image: url("../imgs/splash.png");
+  background-color: #043b4d;
+  background-image: url('../imgs/splash.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -47,7 +47,7 @@ body {
   line-height: 90vh;
 }
 
-.splash.display-none{
+.splash.display-none {
   position: fixed;
   opacity: 0;
   top: 0;
@@ -56,8 +56,8 @@ body {
   height: 100vh;
   font-size: 144px;
   font-family: 'Cormorant SC', serif;
-  background-color: #043B4D;
-  background-image: url("../imgs/splash.png");
+  background-color: #043b4d;
+  background-image: url('../imgs/splash.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -68,18 +68,16 @@ body {
   transition: all 0.9s;
 }
 
-.fade-in{
+.fade-in {
   opacity: 0;
   animation: fadeIn 1s ease-in forwards;
 }
 
-
 @keyframes fadeIn {
-  to{
-      opacity: 1;
+  to {
+    opacity: 1;
   }
 }
-
 
 #btnTop {
   display: none;
@@ -187,11 +185,11 @@ body {
   transition: 0.3s;
 }
 .nav-toggler span:before {
-  content: "";
+  content: '';
   transform: translateY(-9px);
 }
 .nav-toggler span:after {
-  content: "";
+  content: '';
   transform: translateY(6px);
 }
 .nav-toggler.toggler-open span {
@@ -384,7 +382,7 @@ footer {
   flex-wrap: wrap;
 }
 
-.socials svg{
+.socials svg {
   margin-right: 20px;
 }
 
@@ -394,7 +392,7 @@ footer {
 
 /* mobile breakpoint start */
 @media screen and (max-width: 767px) {
-  .copyright{
+  .copyright {
     flex-grow: 1;
     text-align: center;
   }
@@ -486,7 +484,7 @@ footer {
     width: 100%;
     margin-bottom: 20px;
   }
-  .splash{
+  .splash {
     font-size: 74px;
   }
 }
