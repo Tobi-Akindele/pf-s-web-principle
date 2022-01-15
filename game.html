@@ -51,13 +51,21 @@
           <div class="content-container">
             <label>Hangman</label>
             <div class="card game-setup">
+              <div class="timer">
+                <p>
+                  <span id="hour">00</span>:<span id="minute">00</span>:<span
+                    id="seconds"
+                    >00</span
+                  >
+                </p>
+              </div>
               <div class="game-score">
                 <div>
-                  <h3>Highscores:</h3>
+                  <h3>Fastest Times</h3>
                   <!-- <ol> -->
-                  <p>Best time: <span id="first">3 minutes</span></p>
-                  <p>2nd best: <span id="second">5.4 minutes</span></p>
-                  <p>3rd best: <span id="third">15 minutes</span></p>
+                  <p>1. <span id="first"></span></p>
+                  <p>2. <span id="second"></span></p>
+                  <p>3. <span id="third"></span></p>
                   <!-- </ol> -->
                 </div>
                 <div>
@@ -70,15 +78,14 @@
               <div class="game-start">
                 <div class="game-logo">
                   <img
-                    src="../hangman/img/0.png"
+                    id="hanging"
+                    src="../hangman/graphics/0.png"
                     width="300vw"
                     height="250vh"
                   />
-                  <p style="font-weight: 900; font-size: larger;">
+                  <p style="font-weight: 900; font-size: larger">
                     Idiom meaning:
-                    <span id="hint"
-                      ></span
-                    >
+                    <span id="hint"></span>
                   </p>
                 </div>
                 <div class="game-alphabet-section">
@@ -88,7 +95,7 @@
                   <div class="game-alphabet" id="game-alphabet"></div>
 
                   <div class="game-reset">
-                    <button>RESET</button>
+                    <button onClick="reset()">RESET</button>
                   </div>
                 </div>
               </div>

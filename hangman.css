@@ -25,6 +25,17 @@ a {
   color: inherit;
 }
 
+.timer {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.timer p {
+  font-size: xx-large;
+  font-weight: 900;
+}
+
 .game-score {
   display: flex;
   justify-content: space-between;
@@ -32,6 +43,10 @@ a {
 
 .game-logo {
   text-align: center;
+}
+
+.game-logo img {
+  margin-left: 7%;
 }
 
 .game-input {
@@ -43,17 +58,10 @@ a {
 }
 
 .game-input p {
-  /* border-bottom: 2px solid black;
-  border-top: 0;
-  border-left: 0;
-  border-right: 0; */
-  /* width: 38px;
-  outline: none;
-  box-shadow: none;
-  box-shadow: none; */
   text-align: center;
   font-size: 25px;
   margin-right: 3px;
+  margin-bottom: 20px;
 }
 
 .game-alphabet {
