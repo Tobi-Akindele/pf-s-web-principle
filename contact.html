@@ -50,33 +50,40 @@
           <div class="content-container">
             <label>Contact</label>
             <div class="card">
-              <form>
+              <form onsubmit="validateForm()">
                 <p>
                   Email me at tobi.akindele3@gmail.com or call me at
                   +447494717575
                 </p>
                 <div class="contact__form">
                   <input
+                    id="email"
                     type="email"
                     class="form-control"
                     placeholder="Email *"
+                    required
                   />
                   <input
+                    id="name"
                     type="name"
                     class="form-control"
                     placeholder="Name *"
+                    required
                   />
                   <input
+                    id="subject"
                     type="subject"
                     class="form-control"
                     placeholder="Subject *"
+                    required
                   />
                   <textarea
                     id="msg"
                     name="message"
-                    rows="12"
+                    rows="22"
                     cols="45"
                     placeholder="Message *"
+                    required
                   ></textarea>
                 </div>
 
@@ -146,5 +153,6 @@
       </footer>
     </div>
     <script src="script.js"></script>
+    <script src="contact.js"></script>
   </body>
 </html>
