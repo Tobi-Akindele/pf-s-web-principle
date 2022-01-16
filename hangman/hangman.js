@@ -67,7 +67,7 @@ let seconds = 0;
 let totalSeconds = 0;
 let intervalId = null;
 
-function startTimer(interval) {
+startTimer = (interval) => {
   intervalId = setInterval(timer, interval);
   function timer() {
     ++totalSeconds;
@@ -79,24 +79,24 @@ function startTimer(interval) {
     document.getElementById('minute').innerHTML = formatToTwoDigits(minute);
     document.getElementById('seconds').innerHTML = formatToTwoDigits(seconds);
   }
-}
+};
 
-function stopTimer() {
+stopTimer = () => {
   clearInterval(intervalId);
-}
+};
 
-function formatToTwoDigits(number) {
+formatToTwoDigits = (number) => {
   return ('0' + number).slice(-2);
-}
+};
 
-function loadHighscores() {
+loadHighscores = () => {
   highScores = JSON.parse(
     localStorage.getItem(questionId + '_highscores') || '[]'
   );
   showHighScores(highScores);
-}
+};
 
-function showHighScores(scores) {
+showHighScores = (scores) => {
   document.getElementById('first').innerHTML = scores
     ? secToHHMM(scores[0])
     : '';
@@ -106,9 +106,9 @@ function showHighScores(scores) {
   document.getElementById('third').innerHTML = scores
     ? secToHHMM(scores[2])
     : '';
-}
+};
 
-function secToHHMM(secs) {
+secToHHMM = (secs) => {
   if (secs) {
     let hours = Math.floor(secs / 3600);
     let minutes = Math.floor((secs - hours * 3600) / 60);
@@ -131,9 +131,9 @@ function secToHHMM(secs) {
   } else {
     return '';
   }
-}
+};
 
-function generateQuestion() {
+generateQuestion = () => {
   const question = data[Math.floor(Math.random() * data.length)];
   idiom = question.idiom.toUpperCase();
   questionId = question.id;
@@ -142,9 +142,9 @@ function generateQuestion() {
     JSON.parse(localStorage.getItem(question.id + '_highscores') || '[]')
   );
   document.getElementById('hint').innerHTML = question.hint;
-}
+};
 
-function loadButtons() {
+loadButtons = () => {
   let buttons = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     .split('')
     .map(
@@ -165,9 +165,9 @@ function loadButtons() {
     .join('');
 
   document.getElementById('game-alphabet').innerHTML = buttons;
-}
+};
 
-function handleGuess(letter) {
+handleGuess = (letter) => {
   guessed.indexOf(letter) === -1 ? guessed.push(letter) : null;
   document.getElementById(letter).setAttribute('disabled', true);
 
@@ -179,9 +179,9 @@ function handleGuess(letter) {
     updateWrongGuessState();
     checkGuessLimit();
   }
-}
+};
 
-function checkGameState() {
+checkGameState = () => {
   idiomStatus = idiomStatus.replace(/&nbsp;&nbsp;/g, ' ');
   idiomStatus = idiomStatus.trim();
   if (idiom === idiomStatus) {
@@ -191,9 +191,9 @@ function checkGameState() {
     showHighScores(highScores);
     stopTimer();
   }
-}
+};
 
-function computeHighscores() {
+computeHighscores = () => {
   let nHighScores = [];
   highScores = JSON.parse(
     localStorage.getItem(questionId + '_highscores') || '[]'
@@ -205,29 +205,31 @@ function computeHighscores() {
   }
   highScores = nHighScores;
   localStorage.setItem(questionId + '_highscores', JSON.stringify(highScores));
-}
+};
 
-function updateWrongGuessState() {
+updateWrongGuessState = () => {
   document.getElementById('hanging').src =
     '../hangman/graphics/' + wrongGuess + '.png';
   document.getElementById('wrongGuess').innerHTML = wrongGuess;
-}
+};
 
-function checkGuessLimit() {
+checkGuessLimit = () => {
   if (wrongGuess === wrongGuessLimit) {
     document.getElementById('question').innerHTML = 'Answer: ' + idiom;
-    document.getElementById('game-alphabet').innerHTML = 'Game Over !!!';
+    document.getElementById('game-alphabet').innerHTML =
+      'Game over, try again !!!';
+    stopTimer();
   }
-}
+};
 
-function maskWord(word) {
+maskWord = (word) => {
   return word
     .split('')
     .map((letter) => (guessed.indexOf(letter) >= 0 ? letter : ' _ '))
     .join('');
-}
+};
 
-function guessedPhrase() {
+guessedPhrase = () => {
   let maskedWords = [];
   idiom
     .split(' ')
@@ -237,14 +239,14 @@ function guessedPhrase() {
     .join('');
   idiomStatus = maskedWords.join('');
   document.getElementById('question').innerHTML = idiomStatus;
-}
+};
 
 document.getElementById('wrongGuess').innerHTML = wrongGuess;
 document.getElementById('wrongGuessLimit').innerHTML = wrongGuessLimit;
 
-function reset() {
+reset = () => {
   location.reload();
-}
+};
 
 loadHighscores();
 generateQuestion();
