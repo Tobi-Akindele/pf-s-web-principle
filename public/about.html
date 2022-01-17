@@ -5,10 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="contact.css" />
-    <title>Contact</title>
+    <link rel="stylesheet" href="about.css" />
+    <title>About</title>
   </head>
   <body>
+    <button onclick="topFunction()" id="btnTop" title="Go to top">
+      &#8593;
+    </button>
     <div class="central-container">
       <div class="navbar-area">
         <div class="container">
@@ -48,49 +51,157 @@
       <div class="site-content">
         <section class="intro-area new">
           <div class="content-container">
-            <label>Contact</label>
+            <label>About</label>
             <div class="card">
-              <form onsubmit="validateForm()">
-                <p>
-                  Email me at tobi.akindele3@gmail.com or call me at
-                  +447494717575
-                </p>
-                <div class="contact__form">
-                  <input
-                    id="email"
-                    type="email"
-                    class="form-control"
-                    placeholder="Email *"
-                    required
-                  />
-                  <input
-                    id="name"
-                    type="text"
-                    class="form-control"
-                    placeholder="Name *"
-                    required
-                  />
-                  <input
-                    id="subject"
-                    type="text"
-                    class="form-control"
-                    placeholder="Subject *"
-                    required
-                  />
-                  <textarea
-                    id="msg"
-                    name="message"
-                    rows="22"
-                    cols="45"
-                    placeholder="Message *"
-                    required
-                  ></textarea>
+              <div class="card-content about">
+                <div class="card-details">
+                  <h4>About me....</h4>
+                  <p>
+                    A smart person who loves giving his best at whatever he does
+                    and loves to acquire new skills as required for the
+                    development of the organization and the society.
+                  </p>
                 </div>
+                <img src="../imgs/Tobii.png" alt="Tobi Akindele Image" />
+              </div>
+              <div class="card-details about-education">
+                <h4>Education</h4>
+                <hr />
+                <div class="about-education_details">
+                  <div class="about-education_details-img">
+                    <img src="../imgs/stafford.png" alt="Staffordshire university logo" />
+                  </div>
+                  <div class="about-education_details-content">
+                    <h4>Master of Science (Software Engineering)</h4>
+                    <p>
+                      <span></span> Sttaffordshire University, Stoke-on-trent,
+                      United Kingdom
+                    </p>
+                    <p><span></span> September 2021 - August 2022</p>
+                  </div>
+                </div>
+                <hr />
+                <div class="about-education_details">
+                  <div class="about-education_details-img">
+                    <img src="../imgs/eksu.png" alt="EKSU Logo" />
+                  </div>
+                  <div class="about-education_details-content">
+                    <h4>Ekiti State University, Ekiti, Nigeria</h4>
+                    <p><span></span> September 2013 - January 2018</p>
+                  </div>
+                </div>
+              </div>
 
-                <div class="form-button">
-                  <button type="submit">SEND</button>
+              <div class="card-details about-projects">
+                <h4>Projects</h4>
+                <div class="about-education_projects">
+                  <div class="card card-sub">
+                    <div class="card-content">
+                      <div class="img-container about-project-img">
+                        <img src="../imgs/logoOne.png" alt="Interswitch logo" />
+                      </div>
+                      <div class="card-details about-project-details">
+                        <h4>SmartTrade</h4>
+                        <p>
+                          SmartTrade is a financial bespoke application that
+                          enable financial institution automate their trade
+                          processes which includes import, exports and treasury.
+                        </p>
+                        <hr />
+                        <div class="goals">
+                          <div class="role">
+                            <h4>My Role</h4>
+                            <p>
+                              I contributed as a backend engineer, exposing APIs
+                              that are consumable from all presentation layers.
+                            </p>
+                          </div>
+                          <div class="main-goal">
+                            <h4>Main Goal</h4>
+                            <p>
+                              The goal of this project was to eradicate the
+                              manual and tedious processes that are involved in
+                              the banking trading operations.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card card-sub">
+                    <div class="card-content">
+                      <div class="img-container about-project-img">
+                        <img src="../imgs/logoTwo.png" alt="ZEETENDO logo" />
+                      </div>
+                      <div class="card-details about-project-details even">
+                        <h4>ZEETENDO</h4>
+                        <p>
+                          ZEETENDO is a restaurant located in a metropolitan
+                          area, They offer a wide range of healthy and delicious
+                          Regional meals. This implementation effectively
+                          addresses their user's pain points.
+                        </p>
+                        <hr />
+                        <div class="goals">
+                          <div class="role">
+                            <h4>My Role</h4>
+                            <p>
+                              ZEETENDO is a restaurant located in a metropolitan
+                              area, They offer a wide range of healthy and
+                              delicious Regional meals. This implementation
+                              effectively addresses their user's pain points.
+                            </p>
+                          </div>
+                          <div class="main-goal">
+                            <h4>Main Goal</h4>
+                            <p>
+                              The goal of this project was to take the business
+                              online and creating awareness for both its
+                              existing and new customers.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card card-sub">
+                    <div class="card-content">
+                      <div class="img-container about-project-img">
+                        <img src="../imgs/logoThree.png" alt="Closa2Me logo" />
+                      </div>
+                      <div class="card-details about-project-details">
+                        <h4>Closa2me</h4>
+                        <p>
+                          Closa2Me is a website for finding small businesses,
+                          the website connect potential customers to businesses
+                          registered on the website, Closa2Me targets the
+                          general public who need to connect to a business
+                          closer to them
+                        </p>
+                        <hr />
+                        <div class="goals">
+                          <div class="role">
+                            <h4>My Role</h4>
+                            <p>
+                              I contributed as a backend engineer, designing and
+                              implementing the entire logic layer and databases.
+                            </p>
+                          </div>
+                          <div class="main-goal">
+                            <h4>Main Goal</h4>
+                            <p>
+                              The goal of this project is to connect local
+                              businesses with potential customers.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </form>
+              </div>
             </div>
           </div>
         </section>
@@ -153,6 +264,5 @@
       </footer>
     </div>
     <script src="script.js"></script>
-    <script src="contact.js"></script>
   </body>
 </html>
