@@ -1,0 +1,136 @@
+.card-sub{
+    padding: 0px;
+}
+.about{
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.about .card-details{
+    margin-right: auto;
+    padding: 6%;
+}
+
+.about-education,
+.about-projects{
+    background-color: #363535;
+    padding: 2% 0 0 6%;
+}
+
+.about-projects{
+    background-color: transparent;
+}
+
+.about-education h4{
+    color: white;
+}
+
+.about-education_details{
+    display: flex;
+    padding: 10px 0px;
+}
+
+.about-education_details-img{
+    width: 25%;
+    background-color: white;
+    text-align: center;
+}
+
+.about-education_details-content{
+    margin-left: 40px;
+    color: white;
+}
+
+.about-education_details-content h4{
+    font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.about-education_details-content p{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 25px;
+    margin: 5px 0px;
+    text-align: justify;
+}
+
+.about-project-img{
+    width: 30%;
+    margin: auto;
+    text-align:center;
+}
+
+.about-project-img img{
+    width: 85%;
+}
+
+.about-project-details{
+    flex-grow: 1;
+    background: rgba(4, 59, 77, 0.08);
+    padding: 16px 30px !important;
+}
+
+.goals{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    flex-wrap: wrap;
+}
+
+.even{
+    background-color:#363535;
+    color: white;
+}
+
+.even p{
+    color: white !important;
+}
+
+.role,
+.main-goal{
+    width: 48%;
+}
+
+@media screen and (max-width: 767px) {
+    .about,
+    .about .card-details,
+    .about-education,
+    .about-projects{
+        padding: 0;
+    }
+
+    .about-projects{
+        margin-top: 20px;
+    }
+
+    .about-education_details-content {
+        color: white;
+        margin: 10px;
+    }
+
+    .about-education_details-img{
+        display: none;
+    }
+
+    .about-education_details-content h4 {
+        font-size: 20px;
+        text-align: justify;
+    }
+
+    .role,
+    .main-goal{
+        width: 100%;
+    }
+
+    .about-project-details {
+        padding: 16px 9px !important;
+    }
+
+    .card-content p {
+        margin: 15px 0px;
+    }
+}

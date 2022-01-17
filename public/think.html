@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="contact.css" />
-    <title>Contact</title>
+    <link rel="stylesheet" href="think.css" />
+    <title>Think of a number</title>
   </head>
   <body>
     <div class="central-container">
@@ -46,51 +46,45 @@
       <!-- navbar-area end -->
 
       <div class="site-content">
-        <section class="intro-area new">
+        <section class="intro-area new think">
           <div class="content-container">
-            <label>Contact</label>
-            <div class="card">
-              <form onsubmit="validateForm()">
-                <p>
-                  Email me at tobi.akindele3@gmail.com or call me at
-                  +447494717575
-                </p>
-                <div class="contact__form">
-                  <input
-                    id="email"
-                    type="email"
-                    class="form-control"
-                    placeholder="Email *"
-                    required
-                  />
-                  <input
-                    id="name"
-                    type="text"
-                    class="form-control"
-                    placeholder="Name *"
-                    required
-                  />
-                  <input
-                    id="subject"
-                    type="text"
-                    class="form-control"
-                    placeholder="Subject *"
-                    required
-                  />
-                  <textarea
-                    id="msg"
-                    name="message"
-                    rows="22"
-                    cols="45"
-                    placeholder="Message *"
-                    required
-                  ></textarea>
+            <label>Think of a number</label>
+            <div class="think-card">
+              <div class="card">
+                <div class="game-instructions">
+                  <h4>How to play the game</h4>
+                  <ul>
+                    <li>A number generated between 1 and 100</li>
+                    <li>
+                      You are required to guess the number and you'll be
+                      notified if you got it right
+                    </li>
+                    <li>Goodluck</li>
+                  </ul>
                 </div>
+              </div>
 
-                <div class="form-button">
-                  <button type="submit">SEND</button>
+              <div class="card">
+                <div class="game-board">
+                  <p>Enter a Number Between 1 to 100</p>
+                  <div class="game-number-input">
+                    <p class="number-label">Number:</p>
+                    <input
+                      id="number"
+                      type="number"
+                      class="form-control"
+                      placeholder="Type....."
+                    />
+                  </div>
+                  <div class="game-buttons">
+                    <button onClick="handleGuess()">Guess</button>
+                    <button onClick="reset()">Restart</button>
+                  </div>
                 </div>
-              </form>
+                <div id="game-outcome" class="game-outcome">
+                  <p id="outcomeMessage"></p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -153,6 +147,6 @@
       </footer>
     </div>
     <script src="script.js"></script>
-    <script src="contact.js"></script>
+    <script src="/think/think.js"></script>
   </body>
 </html>
